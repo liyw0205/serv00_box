@@ -46,7 +46,7 @@ cd $cloudflared_dir
 echo "- 正在重启cloudflared"
 kill -9 $(top | grep "cloudflared" | awk '{print $1}') > /dev/null 2>&1
 ./cloudflared tunnel --config $HOME/.cloudflared/config.yml run > $HOME/.cloudflared/log.txt &
-if ps | grep "cloudflared tunnel --config" | grep -v grep >/dev/null; then
+if top | grep "cloudflared tunnel --config" | grep -v grep >/dev/null; then
 echo "> cloudflared正在运行"
 else
 echo "> cloudflared已停止"
@@ -65,7 +65,7 @@ start)
 cd $cloudflared_dir
 echo "- 正在启动cloudflared"
 ./cloudflared tunnel --config $HOME/.cloudflared/config.yml run > $HOME/.cloudflared/log.txt &
-if ps | grep "cloudflared tunnel --config" | grep -v grep >/dev/null; then
+if top | grep "cloudflared tunnel --config" | grep -v grep >/dev/null; then
 echo "> cloudflared正在运行"
 else
 echo "> cloudflared已停止"

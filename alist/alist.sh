@@ -48,7 +48,7 @@ echo "- 正在重启Alist"
 kill -9 $(top | grep "alist" | awk '{print $1}') > /dev/null 2>&1
 [[ -d "$alist_dir/daemon" ]] && rm -rf "$alist_dir/daemon"
 ./alist server > /dev/null 2>&1 &
-if ps | grep "alist server" | grep -v grep >/dev/null; then
+if top | grep "alist server" | grep -v grep >/dev/null; then
 echo "> Alist正在运行"
 else
 echo "> Alist已停止"
@@ -67,7 +67,7 @@ start)
 cd $alist_dir
 echo "- 正在启动Alist"
 ./alist server > /dev/null 2>&1 &
-if ps | grep "alist server" | grep -v grep >/dev/null; then
+if top | grep "alist server" | grep -v grep >/dev/null; then
 echo "> Alist正在运行"
 else
 echo "> Alist已停止"

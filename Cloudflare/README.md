@@ -24,4 +24,4 @@ restart 重启cloudflared
 stop 关闭cloudflared
 ```
 
-[旧说明](Cloudflare/README_out.md)
+[旧说明](README_out.md)
