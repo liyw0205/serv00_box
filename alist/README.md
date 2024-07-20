@@ -24,4 +24,4 @@ restart 重启alist
 stop 关闭alist
 ```
 
-[旧说明](alist/README_out.md)
+[旧说明](README_out.md)
