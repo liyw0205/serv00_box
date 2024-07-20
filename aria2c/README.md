@@ -8,13 +8,15 @@
 2. 在Ports处，开通两个随机端口
 
 3. 下载脚本
+```地址1
+wget https://cdn.jsdelivr.net/gh/liyw0205/serv00_box@main/aria2c/aria2c.sh -O $HOME/aria2c.sh && chmod +x $HOME/aria2c.sh
 ```
-cd $HOME && wget **aria2c.sh链接** -O $HOME/aria2c.sh && chmod +x aria2c.sh
+```地址2
+wget https://gitee.com/keep-an-appointment/serv00_box/raw/master/aria2c/aria2c.sh -O $HOME/aria2c.sh && chmod +x $HOME/aria2c.sh
 ```
 4. 启动aria2c
 ```
-cd $HOME
-./aria2c.sh
+cd && ./aria2c.sh
 ```
 
 访问rpc：http://IP:rpc端口/jsonrpc
